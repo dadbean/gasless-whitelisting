@@ -6,19 +6,20 @@ https://medium.com/better-programming/handling-nft-presale-allow-lists-off-chain
 & this repo - EIP721 - Whitelisting : 
 https://github.com/msfeldstein/EIP712-whitelisting
 
-HIGH LEVEL OVERVIEW :
+<h1>HIGH LEVEL OVERVIEW :</h1>
 
-ON LOCAL CHAIN
-1. Hash the whitelisted public key on your local chain with an "admin" key pair. 
+<ol>
+<h2>ON LOCAL CHAIN</h2>
+<li> Hash the whitelisted public key on your local chain with an "admin" key pair. </li>
 
-FRONT END
-2. Pass the result as a parameter to the smart contract minting function
+<h2>FRONT END</h2>
+<li> Pass the result as a parameter to the smart contract minting function</li>
 
-ONCHAIN
-3. Recover signer of original Hash
+<h2>ONCHAIN</h2>
+<li> Recover signer of original Hash</li>
 
-4. Verify signer as "admin" public key
+<li> Verify signer as "admin" public key</li>
 
-5. Hash msg.senders address
+<li> Hash msg.senders address</li>
 
-6. Verify new hash against original hash
+<li> Verify new hash against original hash</li>
